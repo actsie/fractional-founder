@@ -582,7 +582,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section id="cta" className="max-w-7xl mx-auto px-8 py-16">
-        <div className="bg-gradient-to-r from-[#5E50A0]/10 to-[#9b87f5]/10 rounded-2xl p-12">
+        <div className="bg-gradient-to-r from-[#5E50A0]/10 to-[#9b87f5]/10 rounded-2xl p-6 md:p-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left column - Text content */}
             <div className="space-y-6 text-center md:text-left">
