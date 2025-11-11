@@ -7,6 +7,7 @@ import SectionGrid from './components/SectionGrid';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import chatAnimation from '../public/chat-with-us.json';
+import helloAnimation from '../public/Hello.json';
 
 declare global {
   interface Window {
@@ -436,9 +437,16 @@ export default function Home() {
             {/* Intro Card */}
             <div className="break-inside-avoid mb-6">
               <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100">
-                <p className="text-lg">
-                  Hi, I&apos;m <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30 hover:border-[#AF97F8]">Mai</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg">Founder, Engineer & Growth Strategist</span></span> — a founder, engineer, and growth strategist who turns vague ideas into scalable systems.
-                </p>
+                <div className="text-lg">
+                  Hi, I&apos;m <span className="group relative inline-block">
+                    <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30 hover:border-[#AF97F8]">Mai</strong>
+                    <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
+                      <div className="w-32">
+                        <Lottie animationData={helloAnimation} loop={true} />
+                      </div>
+                    </span>
+                  </span> — a founder, engineer, and growth strategist who turns vague ideas into scalable systems.
+                </div>
               </div>
             </div>
 
@@ -449,7 +457,31 @@ export default function Home() {
                   I&apos;ve built products from scratch, scaled them to millions of users, and operated across engineering, design, and growth.
                 </p>
                 <p>
-                  As co-founder and CEO of <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">HeyMint</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg z-50">No-code NFT platform for creators</span></span>, I led a no-code NFT platform that served <strong style={{ color: '#AF97F8' }}>1M+ users</strong> (including MasterCard and Ubisoft), generated <strong style={{ color: '#AF97F8' }}>$2M+ revenue</strong>, raised <strong style={{ color: '#AF97F8' }}>$3.4M</strong> in venture funding, and was acquired by <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Alchemy</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg z-50">Leading web3 development platform</span></span>, one of the fastest-growing unicorns.
+                  As co-founder and CEO of <span className="group relative inline-block">
+                    <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">HeyMint</strong>
+                    <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
+                      <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden w-80">
+                        <img src="/HeyMint.png" alt="HeyMint" className="w-full h-40 object-cover object-top" />
+                        <div className="p-4 space-y-2">
+                          <div className="font-semibold text-gray-900 dark:text-white">HeyMint</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-300">No-code NFT platform for creators</div>
+                          <div className="text-xs text-gray-400">heymint.xyz</div>
+                        </div>
+                      </div>
+                    </span>
+                  </span>, I led a no-code NFT platform that served <strong style={{ color: '#AF97F8' }}>1M+ users</strong> (including MasterCard and Ubisoft), generated <strong style={{ color: '#AF97F8' }}>$2M+ revenue</strong>, raised <strong style={{ color: '#AF97F8' }}>$3.4M</strong> in venture funding, and was acquired by <span className="group relative inline-block">
+                    <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Alchemy</strong>
+                    <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
+                      <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden w-80">
+                        <img src="/Alchemy.png" alt="Alchemy" className="w-full h-40 object-cover object-top" />
+                        <div className="p-4 space-y-2">
+                          <div className="font-semibold text-gray-900 dark:text-white">Alchemy</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-300">Leading web3 development platform</div>
+                          <div className="text-xs text-gray-400">alchemy.com</div>
+                        </div>
+                      </div>
+                    </span>
+                  </span>, one of the fastest-growing unicorns.
                 </p>
               </div>
             </div>
@@ -458,7 +490,19 @@ export default function Home() {
             <div className="break-inside-avoid mb-6">
               <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100">
                 <p>
-                  Before that, I was a Senior Software Engineer at <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Gusto</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg z-50">Modern payroll & HR platform</span></span>, leading top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
+                  Before that, I was a Senior Software Engineer at <span className="group relative inline-block">
+                    <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Gusto</strong>
+                    <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
+                      <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden w-80">
+                        <img src="/Gusto.png" alt="Gusto" className="w-full h-40 object-cover object-top" />
+                        <div className="p-4 space-y-2">
+                          <div className="font-semibold text-gray-900 dark:text-white">Gusto</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-300">Modern payroll & HR platform</div>
+                          <div className="text-xs text-gray-400">gusto.com</div>
+                        </div>
+                      </div>
+                    </span>
+                  </span>, leading top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
                 </p>
               </div>
             </div>
