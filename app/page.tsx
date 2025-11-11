@@ -270,9 +270,9 @@ export default function Home() {
       {/* Example Work Section */}
       <section id="example-work" className="max-w-7xl mx-auto px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold mb-4">Example Work</h2>
+          <h2 className="text-3xl font-semibold mb-4">What I Can Build for You</h2>
           <p className="text-gray-700/80 dark:text-neutral-300/80 max-w-2xl mx-auto">
-            Real projects, real results — here&apos;s what founders have asked me to build
+            Request any of these, or tell me what you need
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
