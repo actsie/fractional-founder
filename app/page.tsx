@@ -91,7 +91,7 @@ export default function Home() {
                 >
                   <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 22.5l-.394-1.933a2.25 2.25 0 00-1.423-1.423L12.75 18.75l1.933-.394a2.25 2.25 0 001.423-1.423L16.5 15l.394 1.933a2.25 2.25 0 001.423 1.423l1.933.394-1.933.394a2.25 2.25 0 00-1.423 1.423z" />
                 </svg>
-                <span className="text-gray-700 dark:text-neutral-300">Fractional Founder Partner</span>
+                <span className="text-gray-700 dark:text-neutral-300">Your fractional co-founder. No equity required.</span>
               </div>
               <h1 className="text-4xl font-medium leading-tight lg:text-6xl">
                 Ship Faster, Scale Smarter—Without Burning Out
@@ -122,19 +122,19 @@ export default function Home() {
                 <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>1M+ Users Served</span>
+                <span>Trusted by 20+ founders</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-700/80 dark:text-neutral-300/80">
                 <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>$3.4M Raised</span>
+                <span>Projects delivered in 1 week</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-700/80 dark:text-neutral-300/80">
                 <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Acquired by Alchemy</span>
+                <span>40-60% cost reduction with AI automation</span>
               </div>
             </div>
           </div>
