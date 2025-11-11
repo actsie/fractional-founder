@@ -470,10 +470,10 @@ export default function Home() {
             <div className="break-inside-avoid mb-6">
               <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100 space-y-4">
                 <div>
-                  I&apos;ve built products from scratch, scaled them to millions of users, and operated across engineering, design, and growth.
+                  I&apos;ve built products from scratch, scaled them to over 1M users, and operated across engineering, design, and growth.
                 </div>
                 <div>
-                  As co-founder and CEO of <span className="group relative inline-block">
+                  I co-founded and led <span className="group relative inline-block">
                     <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">HeyMint</strong>
                     <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
                       <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden w-80">
@@ -485,7 +485,7 @@ export default function Home() {
                         </div>
                       </div>
                     </span>
-                  </span>, I led a no-code NFT platform that served <strong style={{ color: '#AF97F8' }}>1M+ users</strong> (including MasterCard and Ubisoft), generated <strong style={{ color: '#AF97F8' }}>$2M+ revenue</strong>, raised <strong style={{ color: '#AF97F8' }}>$3.4M</strong> in venture funding, and was acquired by <span className="group relative inline-block">
+                  </span>, a no-code NFT platform that served <strong style={{ color: '#AF97F8' }}>1M+ users</strong> (including MasterCard and Ubisoft), generated <strong style={{ color: '#AF97F8' }}>$2M+ revenue</strong>, raised <strong style={{ color: '#AF97F8' }}>$3.4M</strong> in venture funding, and was acquired by <span className="group relative inline-block">
                     <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Alchemy</strong>
                     <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
                       <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl overflow-hidden w-80">
@@ -518,7 +518,7 @@ export default function Home() {
                         </div>
                       </div>
                     </span>
-                  </span>, leading top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
+                  </span>, where I led top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
                 </div>
               </div>
             </div>
