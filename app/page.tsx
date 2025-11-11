@@ -277,42 +277,42 @@ export default function Home() {
             <div className="text-sm font-medium text-[#AF97F8]">Product Development</div>
             <h4 className="font-semibold">MVP in One Week</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Built MVP for fintech startup → validated with 127 beta users → founders raised $1.2M seed round 3 weeks later
+              Build MVP for a new product idea in a week, enabling the founder to validate with 100 users before hiring engineers.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
             <div className="text-sm font-medium text-[#AF97F8]">Growth & GTM</div>
             <h4 className="font-semibold">AI-Powered Pricing Experiment</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Designed and launched AI-powered pricing test for SaaS startup → 34% conversion lift → $47K additional MRR in month 1
+              Design and launch an AI-powered pricing experiment, driving major conversion lift.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
             <div className="text-sm font-medium text-[#AF97F8]">AI Automation</div>
             <h4 className="font-semibold">Workflow Automation</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Audited founder&apos;s workflow and automated weekly reporting → reduced prep time from 4 hours to 30 minutes
+              Audit founder&apos;s workflow and automated weekly reporting and outreach
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
             <div className="text-sm font-medium text-[#AF97F8]">Operations</div>
             <h4 className="font-semibold">Investor Update Automation</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Created GPT-based system for investor update summaries → saved founder 3.5 hours every week
+              Automated investor update summaries using AI, reducing prep time from 4 hours to 30 minutes.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
             <div className="text-sm font-medium text-[#AF97F8]">Content & Marketing</div>
             <h4 className="font-semibold">AI Content Generator</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Built GPT-based content generator for founder&apos;s LinkedIn & newsletter → 10x content output with same quality
+              Create GPT-based content generator for founders&apos; LinkedIn & newsletter posts
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
             <div className="text-sm font-medium text-[#AF97F8]">Design & Dev</div>
             <h4 className="font-semibold">Landing Page Rebuild</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Rebuilt landing page with no-code AI tooling → cut delivery time from 3 weeks to 3 days → 22% conversion improvement
+              Rebuild landing pages with no-code AI tooling, cutting delivery time from 3 weeks to 3 days.
             </p>
           </div>
         </div>
@@ -543,7 +543,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-neutral-900/50 mt-16 border-t border-zinc-200 dark:border-white/10">
+      <footer className="bg-white dark:bg-neutral-900/50 mt-16">
         <div className="max-w-7xl mx-auto px-8 py-12">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="space-y-3">
@@ -575,7 +575,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="pt-8 border-t border-zinc-200 dark:border-white/10">
+          <div className="pt-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-center sm:text-left text-gray-600 dark:text-gray-400 text-sm">
                 © 2025 Fractional Founder Partner. All rights reserved.
