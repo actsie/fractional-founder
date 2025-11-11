@@ -585,7 +585,7 @@ export default function Home() {
         <div className="bg-gradient-to-r from-[#5E50A0]/10 to-[#9b87f5]/10 rounded-2xl p-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left column - Text content */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center md:text-left">
               <h2 className="text-3xl font-semibold">Stop Running Your Company Alone</h2>
               <p className="text-gray-700/80 dark:text-neutral-300/80 text-lg">
                 Get a partner who builds with you. Book a free founder audit and let&apos;s identify what&apos;s holding you back.
