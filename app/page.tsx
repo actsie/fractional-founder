@@ -618,9 +618,6 @@ export default function Home() {
                 <a href="#example-work" className="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                   Example Work
                 </a>
-                <a href="https://pawgrammer.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
-                  Portfolio
-                </a>
               </div>
             </div>
             <div className="space-y-3">
@@ -629,25 +626,14 @@ export default function Home() {
                 <a href="#cta" className="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                   Book Free Audit
                 </a>
-                <a href="mailto:hello@fractionalfounder.com" className="text-gray-600 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
-                  Email
-                </a>
               </div>
             </div>
           </div>
           <div className="pt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p className="text-center sm:text-left text-gray-600 dark:text-gray-400 text-sm">
+            <div className="text-center">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 © 2025 Fractional Founder Partner. All rights reserved.
               </p>
-              <div className="flex gap-6 text-sm">
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
-                  Privacy
-                </a>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
-                  Terms
-                </a>
-              </div>
             </div>
           </div>
         </div>
