@@ -3,14 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 
 interface SectionGridProps {
-  textAreaRef: React.RefObject<HTMLDivElement>;
-  photoRef: React.RefObject<HTMLDivElement>;
+  textAreaRef: React.RefObject<HTMLDivElement | null>;
+  photoRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export default function SectionGrid({ textAreaRef, photoRef }: SectionGridProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
   const startTimeRef = useRef<number>(Date.now());
 
   useEffect(() => {

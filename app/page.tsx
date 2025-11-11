@@ -1,12 +1,57 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import InteractiveGrid from './components/InteractiveGrid';
 import SectionGrid from './components/SectionGrid';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import chatAnimation from '../public/chat-with-us.json';
+
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
 export default function Home() {
   const textAreaRef = useRef<HTMLDivElement>(null);
   const photoRef = useRef<HTMLDivElement>(null);
+  const calendlyInitialized = useRef(false);
+
+  useEffect(() => {
+    // Prevent multiple initializations
+    if (calendlyInitialized.current) return;
+
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    script.onload = () => {
+      // Initialize Calendly widget after script loads
+      const embedElement = document.getElementById('calendly-embed');
+      if (window.Calendly && embedElement && !calendlyInitialized.current) {
+        calendlyInitialized.current = true;
+        window.Calendly.initInlineWidget({
+          url: 'https://calendly.com/stacydonnaj/15min',
+          parentElement: embedElement,
+          resize: true,
+          prefill: {},
+          utm: {},
+          hideGdprBanner: true
+        });
+      }
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 text-gray-800 dark:text-neutral-100 relative isolate antialiased">
       {/* Hero Background Pattern */}
@@ -374,51 +419,101 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold mb-4">Who I Am</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            <div className="md:col-span-1 flex justify-center">
-              <div ref={photoRef} className="w-64 h-64 rounded-full overflow-hidden shadow-xl">
-                <img
-                  src="/mai.jpeg"
-                  alt="Mai - Fractional Founder"
-                  className="w-full h-full object-cover"
-                />
+          <div ref={textAreaRef} className="columns-1 md:columns-2 gap-6 space-y-6">
+            {/* Photo Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="flex justify-center">
+                <div ref={photoRef} className="w-64 h-64 rounded-full overflow-hidden shadow-xl">
+                  <img
+                    src="/mai.jpeg"
+                    alt="Mai - Fractional Founder"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
-            <div ref={textAreaRef} className="md:col-span-2">
-              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 space-y-6 text-gray-800 dark:text-neutral-100">
-                {/* Bio paragraphs */}
+
+            {/* Intro Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100">
                 <p className="text-lg">
-                  Hi, I&apos;m <strong>Mai</strong> — a founder, engineer, and growth strategist who turns vague ideas into scalable systems.
+                  Hi, I&apos;m <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30 hover:border-[#AF97F8]">Mai</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg">Founder, Engineer & Growth Strategist</span></span> — a founder, engineer, and growth strategist who turns vague ideas into scalable systems.
                 </p>
+              </div>
+            </div>
+
+            {/* Background Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100 space-y-4">
                 <p>
                   I&apos;ve built products from scratch, scaled them to millions of users, and operated across engineering, design, and growth.
                 </p>
                 <p>
-                  As co-founder and CEO of <strong>HeyMint</strong>, I led a no-code NFT platform that served <strong>1M+ users</strong> (including MasterCard and Ubisoft), generated <strong>$2M+ revenue</strong>, raised <strong>$3.4M</strong> in venture funding, and was acquired by <strong>Alchemy</strong>, one of the fastest-growing unicorns.
+                  As co-founder and CEO of <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">HeyMint</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg z-50">No-code NFT platform for creators</span></span>, I led a no-code NFT platform that served <strong style={{ color: '#AF97F8' }}>1M+ users</strong> (including MasterCard and Ubisoft), generated <strong style={{ color: '#AF97F8' }}>$2M+ revenue</strong>, raised <strong style={{ color: '#AF97F8' }}>$3.4M</strong> in venture funding, and was acquired by <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Alchemy</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg z-50">Leading web3 development platform</span></span>, one of the fastest-growing unicorns.
                 </p>
+              </div>
+            </div>
+
+            {/* Previous Experience Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100">
                 <p>
-                  Before that, I was a Senior Software Engineer at <strong>Gusto</strong>, leading top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
+                  Before that, I was a Senior Software Engineer at <span className="group relative inline-block"><strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Gusto</strong><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none w-max px-3 py-1 text-xs bg-gray-900 text-white rounded-lg shadow-lg z-50">Modern payroll & HR platform</span></span>, leading top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
                 </p>
+              </div>
+            </div>
 
-                {/* Bento-style skill cards */}
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div className="bg-[#362B6B] rounded-xl p-6">
-                    <h4 className="font-semibold text-white mb-3">Product / Design / Engineering</h4>
-                    <p className="text-sm text-gray-200">
-                      I can turn abstract ideas into working prototypes. Example: <a href="https://pawgrammer.com" target="_blank" rel="noopener noreferrer" className="text-[#C3B1FA] hover:underline font-medium">Pawgrammer.com</a> — built entirely from scratch.
-                    </p>
-                  </div>
-                  <div className="bg-[#362B6B] rounded-xl p-6">
-                    <h4 className="font-semibold text-white mb-3">Marketing / Growth / GTM</h4>
-                    <p className="text-sm text-gray-200">
-                      I combine creativity and technical automation to scale efficiently — from building custom growth tools to optimizing entire user funnels.
-                    </p>
-                  </div>
-                </div>
+            {/* Product Skill Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="bg-[#362B6B] rounded-xl p-6">
+                <h4 className="font-semibold text-white mb-3">Product / Design / Engineering</h4>
+                <p className="text-sm text-gray-200">
+                  I can turn abstract ideas into working prototypes.
+                  <br />
+                  Example: <a href="https://pawgrammer.com" target="_blank" rel="noopener noreferrer" className="text-[#C3B1FA] hover:underline font-medium">Pawgrammer.com</a> — built entirely from scratch.
+                </p>
+              </div>
+            </div>
 
-                <p className="pt-2 text-lg font-medium">
+            {/* Marketing Skill Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="bg-[#362B6B] rounded-xl p-6">
+                <h4 className="font-semibold text-white mb-3">Marketing / Growth / GTM</h4>
+                <p className="text-sm text-gray-200">
+                  I combine creativity and technical automation to scale efficiently — from building custom growth tools to optimizing entire user funnels.
+                </p>
+              </div>
+            </div>
+
+            {/* Final Statement Card */}
+            <div className="break-inside-avoid mb-6">
+              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100">
+                <p className="text-lg font-medium">
                   Now, I help other founders move faster — by building, automating, and simplifying what they don&apos;t have time to do.
                 </p>
+              </div>
+            </div>
+
+            {/* Social Links - 2 Column Grid */}
+            <div className="break-inside-avoid mb-6">
+              <div className="grid grid-cols-2 gap-4">
+                {/* LinkedIn Card */}
+                <a href="https://www.linkedin.com/in/mai-akiyoshi-97234533/" target="_blank" rel="noopener noreferrer" className="block bg-white dark:bg-neutral-900/50 rounded-xl p-6 text-[#AF97F8] hover:text-[#C3B1FA] transition-colors">
+                  <div className="flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </div>
+                </a>
+
+                {/* X/Twitter Card */}
+                <a href="https://x.com/mai_on_chain" target="_blank" rel="noopener noreferrer" className="block bg-white dark:bg-neutral-900/50 rounded-xl p-6 text-[#AF97F8] hover:text-[#C3B1FA] transition-colors">
+                  <div className="flex items-center justify-center">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -426,18 +521,24 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section id="cta" className="max-w-4xl mx-auto px-8 py-16">
-        <div className="bg-gradient-to-r from-[#5E50A0]/10 to-[#9b87f5]/10 rounded-2xl p-12 text-center space-y-6 border border-zinc-200 dark:border-white/10">
-          <h2 className="text-3xl font-semibold">Stop Running Your Company Alone</h2>
-          <p className="text-gray-700/80 dark:text-neutral-300/80 max-w-2xl mx-auto text-lg">
-            Get a partner who builds with you. Book a free founder audit and let&apos;s identify what&apos;s holding you back.
-          </p>
-          <button
-            type="button"
-            className="inline-flex border border-transparent transition-colors items-center justify-center rounded-md bg-[#C3B1FA] px-10 py-4 text-lg font-medium text-gray-900 hover:bg-[#B39EF7] shadow-lg shadow-purple-500/30"
-          >
-            Book Free Founder Audit →
-          </button>
+      <section id="cta" className="max-w-7xl mx-auto px-8 py-16">
+        <div className="bg-gradient-to-r from-[#5E50A0]/10 to-[#9b87f5]/10 rounded-2xl p-12">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left column - Text content */}
+            <div className="space-y-6">
+              <h2 className="text-3xl font-semibold">Stop Running Your Company Alone</h2>
+              <p className="text-gray-700/80 dark:text-neutral-300/80 text-lg">
+                Get a partner who builds with you. Book a free founder audit and let&apos;s identify what&apos;s holding you back.
+              </p>
+              {/* Lottie Animation */}
+              <div className="max-w-sm mx-auto md:mx-0">
+                <Lottie animationData={chatAnimation} loop={true} />
+              </div>
+            </div>
+
+            {/* Right column - Calendly widget */}
+            <div id="calendly-embed" className="rounded-2xl overflow-hidden" style={{ minWidth: '320px', height: '630px', colorScheme: 'dark' }}></div>
+          </div>
         </div>
       </section>
 
