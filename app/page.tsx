@@ -328,7 +328,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex justify-center mb-8">
-          <div className="max-w-2xl w-full p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4">
+          <div className="max-w-2xl w-full p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="space-y-2">
               <div className="text-4xl font-bold">$130-$180<span className="text-xl font-normal text-gray-600 dark:text-neutral-400">/hr</span></div>
               <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">Rate varies based on project complexity and type of work</p>
@@ -374,38 +374,38 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="max-w-2xl w-full grid md:grid-cols-2 gap-4">
-            {/* Left card - Pricing info */}
-            <div className="p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 space-y-2">
-              <div className="font-semibold text-lg">
-                Trial Week:<br />
-                20 hours ($2,000-3,000)
+          <div className="max-w-2xl w-full p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Left column - Pricing info */}
+              <div className="space-y-2">
+                <div className="font-semibold text-lg">
+                  Trial Week:<br />
+                  20 hours ($2,000-3,000)
+                </div>
+                <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
+                  Most founders continue after seeing results in week 1.
+                </p>
               </div>
-              <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-                Most founders continue after seeing results in week 1.
-              </p>
-            </div>
 
-            {/* Right card - Checklist */}
-            <div className="p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20">
+              {/* Right column - Checklist */}
               <div className="flex flex-col gap-3 text-sm">
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#7866CC' }} fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>No Long-Term Contracts</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#7866CC' }} fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Start with 1 Week Trial</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#7866CC' }} fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Cancel Anytime</span>
+                  <span>No Commitment After Trial</span>
                 </div>
               </div>
             </div>
