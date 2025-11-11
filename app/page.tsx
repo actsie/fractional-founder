@@ -202,7 +202,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="group relative pt-8">
+          <div className="group relative pt-8 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="relative h-[200px] p-6 rounded-3xl bg-white dark:bg-neutral-900 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-x-[-8px] hover:translate-y-[-8px] hover:shadow-[8px_8px_0px_0px_#C3B1FA]">
               <div className="absolute -top-8 left-6 w-12 h-12 rounded-full bg-[#C3B1FA] border-8 border-white dark:border-neutral-950 flex items-center justify-center">
                 <span className="text-gray-900 font-bold text-xl">1</span>
@@ -217,7 +217,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="group relative pt-8">
+          <div className="group relative pt-8 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="relative h-[200px] p-6 rounded-3xl bg-white dark:bg-neutral-900 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-x-[-8px] hover:translate-y-[-8px] hover:shadow-[8px_8px_0px_0px_#C3B1FA]">
               <div className="absolute -top-8 left-6 w-12 h-12 rounded-full bg-[#C3B1FA] border-8 border-white dark:border-neutral-950 flex items-center justify-center">
                 <span className="text-gray-900 font-bold text-xl">2</span>
@@ -232,7 +232,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="group relative pt-8">
+          <div className="group relative pt-8 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="relative h-[200px] p-6 rounded-3xl bg-white dark:bg-neutral-900 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-x-[-8px] hover:translate-y-[-8px] hover:shadow-[8px_8px_0px_0px_#C3B1FA]">
               <div className="absolute -top-8 left-6 w-12 h-12 rounded-full bg-[#C3B1FA] border-8 border-white dark:border-neutral-950 flex items-center justify-center">
                 <span className="text-gray-900 font-bold text-xl">3</span>
@@ -247,7 +247,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="group relative pt-8">
+          <div className="group relative pt-8 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="relative h-[200px] p-6 rounded-3xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-x-[-8px] hover:translate-y-[-8px] hover:shadow-[8px_8px_0px_0px_#C3B1FA]">
               <div className="absolute -top-8 left-6 w-12 h-12 rounded-full bg-[#C3B1FA] border-8 border-white dark:border-neutral-950 flex items-center justify-center">
                 <span className="text-gray-900 font-bold text-xl">4</span>
@@ -278,7 +278,7 @@ export default function Home() {
             <div className="text-sm font-medium text-[#AF97F8]">Product Development</div>
             <h4 className="font-semibold">MVP in One Week</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Build MVP for a new product idea in a week, enabling the founder to validate with 100 users before hiring engineers.
+              Build an MVP for a new product idea in a week, enabling the founder to validate with 100 users before hiring engineers.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
@@ -292,7 +292,7 @@ export default function Home() {
             <div className="text-sm font-medium text-[#AF97F8]">AI Automation</div>
             <h4 className="font-semibold">Workflow Automation</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Audit founder&apos;s workflow and automated weekly reporting and outreach
+              Audit a founder&apos;s workflow and automate weekly reporting and outreach.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
@@ -306,7 +306,7 @@ export default function Home() {
             <div className="text-sm font-medium text-[#AF97F8]">Content & Marketing</div>
             <h4 className="font-semibold">AI Content Generator</h4>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Create GPT-based content generator for founders&apos; LinkedIn & newsletter posts
+              Create a GPT-based content generator for founders&apos; LinkedIn & newsletter posts.
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5 space-y-3">
@@ -324,56 +324,48 @@ export default function Home() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold mb-4">Transparent Pricing</h2>
           <p className="text-gray-700/80 dark:text-neutral-300/80 max-w-2xl mx-auto">
-            Simple hourly rates based on the type of work. No hidden fees, no long-term contracts.
+            Flexible hourly rates based on project complexity. No hidden fees, no long-term contracts.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 space-y-4">
+        <div className="flex justify-center mb-8">
+          <div className="max-w-2xl w-full p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4">
             <div className="space-y-2">
-              <div className="text-sm font-medium text-[#AF97F8]">Strategic Work</div>
-              <div className="text-4xl font-bold">$150<span className="text-xl font-normal text-gray-600 dark:text-neutral-400">/hr</span></div>
+              <div className="text-4xl font-bold">$130-$180<span className="text-xl font-normal text-gray-600 dark:text-neutral-400">/hr</span></div>
+              <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">Rate varies based on project complexity and type of work</p>
             </div>
-            <ul className="space-y-3 text-sm">
+            <ul className="grid md:grid-cols-2 gap-x-6 gap-y-3 text-sm">
               <li className="flex gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>AI implementation & workflow design</span>
               </li>
               <li className="flex gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Product strategy & MVP development</span>
               </li>
               <li className="flex gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>GTM planning & growth experiments</span>
               </li>
-            </ul>
-          </div>
-          <div className="p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4">
-            <div className="space-y-2">
-              <div className="text-sm font-medium text-[#AF97F8]">Execution Work</div>
-              <div className="text-4xl font-bold">$100<span className="text-xl font-normal text-gray-600 dark:text-neutral-400">/hr</span></div>
-            </div>
-            <ul className="space-y-3 text-sm">
               <li className="flex gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Ops cleanup & coordination</span>
               </li>
               <li className="flex gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Research & data analysis</span>
               </li>
               <li className="flex gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Pitch deck polish & documentation</span>
@@ -381,30 +373,40 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5">
-          <div className="text-center space-y-2">
-            <div className="font-semibold text-lg">Trial Week: 20 hours ($2,000-3,000)</div>
-            <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
-              Most founders continue after seeing results in week 1.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 pt-2 text-sm">
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>No Long-Term Contracts</span>
+        <div className="flex justify-center">
+          <div className="max-w-2xl w-full grid md:grid-cols-2 gap-4">
+            {/* Left card - Pricing info */}
+            <div className="p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 space-y-2">
+              <div className="font-semibold text-lg">
+                Trial Week:<br />
+                20 hours ($2,000-3,000)
               </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Start with 1 Week Trial</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Cancel Anytime</span>
+              <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
+                Most founders continue after seeing results in week 1.
+              </p>
+            </div>
+
+            {/* Right card - Checklist */}
+            <div className="p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20">
+              <div className="flex flex-col gap-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>No Long-Term Contracts</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Start with 1 Week Trial</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#D7CBFC' }} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Cancel Anytime</span>
+                </div>
               </div>
             </div>
           </div>
@@ -453,10 +455,10 @@ export default function Home() {
             {/* Background Card */}
             <div className="break-inside-avoid mb-6">
               <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100 space-y-4">
-                <p>
+                <div>
                   I&apos;ve built products from scratch, scaled them to millions of users, and operated across engineering, design, and growth.
-                </p>
-                <p>
+                </div>
+                <div>
                   As co-founder and CEO of <span className="group relative inline-block">
                     <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">HeyMint</strong>
                     <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
@@ -482,14 +484,14 @@ export default function Home() {
                       </div>
                     </span>
                   </span>, one of the fastest-growing unicorns.
-                </p>
+                </div>
               </div>
             </div>
 
             {/* Previous Experience Card */}
             <div className="break-inside-avoid mb-6">
               <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100">
-                <p>
+                <div>
                   Before that, I was a Senior Software Engineer at <span className="group relative inline-block">
                     <strong style={{ color: '#AF97F8' }} className="border-b-2 border-dotted border-[#AF97F8]/30">Gusto</strong>
                     <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-200 pointer-events-none z-50">
@@ -503,7 +505,7 @@ export default function Home() {
                       </div>
                     </span>
                   </span>, leading top-of-funnel growth initiatives, and earlier Head of Marketing at a Series-B startup where my campaign sold 10,000 translation devices in 3 days.
-                </p>
+                </div>
               </div>
             </div>
 
