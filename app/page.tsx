@@ -66,7 +66,7 @@ export default function Home() {
           <button
             type="button"
             onClick={() => window.scrollTo({ top: document.getElementById('cta')?.offsetTop || 0, behavior: 'smooth' })}
-            className="inline-flex border border-transparent transition-colors items-center justify-center rounded-md bg-[#C3B1FA] px-6 py-2 font-medium text-gray-900 hover:bg-[#B39EF7]"
+            className="inline-flex border border-transparent items-center justify-center rounded-md bg-[#C3B1FA] px-6 py-2 font-medium text-gray-900 hover:bg-[#B39EF7]"
           >
             Get Started
           </button>
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="lg:py-24 items-center py-16">
           <div className="space-y-12 max-w-4xl mx-auto text-center">
             <div className="space-y-6">
-              <div className="items-center px-3 py-1 rounded-full bg-white/70 text-sm dark:bg-white/10 inline-flex gap-2 border border-zinc-300/70 dark:border-white/20">
+              <div className="items-center px-3 py-1 rounded-full bg-white/70 text-sm dark:bg-white/10 inline-flex gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -101,14 +101,14 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => window.scrollTo({ top: document.getElementById('cta')?.offsetTop || 0, behavior: 'smooth' })}
-                className="inline-flex border border-transparent transition-colors items-center justify-center rounded-md bg-[#C3B1FA] px-8 py-3 font-medium text-gray-900 hover:bg-[#B39EF7] shadow-lg shadow-purple-500/20"
+                className="inline-flex border border-transparent items-center justify-center rounded-md bg-[#C3B1FA] px-8 py-3 font-medium text-gray-900 hover:bg-[#B39EF7] shadow-lg shadow-purple-500/20"
               >
                 Book Free Founder Audit
               </button>
               <button
                 type="button"
                 onClick={() => window.scrollTo({ top: document.getElementById('example-work')?.offsetTop || 0, behavior: 'smooth' })}
-                className="inline-flex transition-colors hover:bg-gray-50 dark:hover:bg-neutral-800 dark:bg-neutral-900 items-center justify-center rounded-md bg-white px-8 py-3 font-medium"
+                className="inline-flex hover:bg-gray-50 dark:hover:bg-neutral-800 dark:bg-neutral-900 items-center justify-center rounded-md bg-white px-8 py-3 font-medium"
               >
                 See Example Work
               </button>
@@ -175,7 +175,7 @@ export default function Home() {
               From concept to validated prototype in days, not months.
             </div>
           </div>
-          <div className="p-6 rounded-2xl bg-white/50 dark:bg-white/5 flex flex-col">
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 flex flex-col">
             <div className="w-12 h-12 rounded-lg bg-[#5E50A0]/10 flex items-center justify-center mb-4">
               <svg className="w-6 h-6" style={{ color: '#5E50A0' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -247,7 +247,7 @@ export default function Home() {
             </div>
           </div>
           <div className="group relative pt-8">
-            <div className="relative h-[200px] p-6 rounded-3xl bg-white dark:bg-neutral-900 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-x-[-8px] hover:translate-y-[-8px] hover:shadow-[8px_8px_0px_0px_#C3B1FA]">
+            <div className="relative h-[200px] p-6 rounded-3xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:translate-x-[-8px] hover:translate-y-[-8px] hover:shadow-[8px_8px_0px_0px_#C3B1FA]">
               <div className="absolute -top-8 left-6 w-12 h-12 rounded-full bg-[#C3B1FA] border-8 border-white dark:border-neutral-950 flex items-center justify-center">
                 <span className="text-gray-900 font-bold text-xl">4</span>
               </div>
@@ -327,7 +327,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4">
+          <div className="p-8 rounded-2xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 space-y-4">
             <div className="space-y-2">
               <div className="text-sm font-medium text-[#AF97F8]">Strategic Work</div>
               <div className="text-4xl font-bold">$150<span className="text-xl font-normal text-gray-600 dark:text-neutral-400">/hr</span></div>
@@ -380,7 +380,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="p-6 rounded-xl bg-gradient-to-r from-[#5E50A0]/10 to-[#9b87f5]/10">
+        <div className="p-6 rounded-xl bg-white/50 dark:bg-white/5">
           <div className="text-center space-y-2">
             <div className="font-semibold text-lg">Trial Week: 20 hours ($2,000-3,000)</div>
             <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">
