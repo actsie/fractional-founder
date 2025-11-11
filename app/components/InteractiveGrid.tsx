@@ -6,6 +6,7 @@ export default function InteractiveGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
   const animationFrameRef = useRef<number>();
+  const startTimeRef = useRef<number>(Date.now());
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -48,6 +49,21 @@ export default function InteractiveGrid() {
       // Clear canvas
       ctx.clearRect(0, 0, width, height);
 
+      // Simple hash function for pseudo-random dot selection
+      const shouldTwinkle = (x: number, y: number) => {
+        const hash = ((x * 73856093) ^ (y * 19349663)) % 100;
+        return hash < 15; // ~15% of dots will twinkle
+      };
+
+      // Calculate time-based twinkle intensity
+      const elapsedTime = (Date.now() - startTimeRef.current) / 1000;
+      const getTwinkle = (x: number, y: number) => {
+        const offset = ((x + y) % 100) / 25; // Stagger timing based on position
+        const cycle = (elapsedTime + offset) % 3.5; // 3.5 second cycle
+        const phase = (cycle / 3.5) * Math.PI * 2;
+        return Math.sin(phase) * 0.3 + 0.7; // Pulse between 0.4 and 1.0
+      };
+
       // Draw dots
       for (let x = 0; x <= width; x += gridSize) {
         for (let y = 0; y <= height; y += gridSize) {
@@ -78,6 +94,12 @@ export default function InteractiveGrid() {
             const g = Math.round(85 + (102 - 85) * intensity);
             const b = Math.round(99 + (204 - 99) * intensity);
             color = `rgb(${r}, ${g}, ${b})`;
+          }
+
+          // Apply twinkle effect to random dots
+          if (shouldTwinkle(x, y)) {
+            const twinkleMultiplier = getTwinkle(x, y);
+            opacity = opacity * twinkleMultiplier;
           }
 
           // Calculate dot size based on hover

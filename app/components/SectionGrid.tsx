@@ -146,13 +146,19 @@ export default function SectionGrid({ textAreaRef, photoRef }: SectionGridProps)
           let opacity = 0.35 * combinedTaper;
           let color = 'rgb(75, 85, 99)';
 
+          // Apply twinkle effect to random dots everywhere
+          if (shouldTwinkle(x, y)) {
+            const twinkleMultiplier = getTwinkle(x, y);
+            opacity = opacity * twinkleMultiplier;
+          }
+
           // Photo glow effect
           let inGlowArea = false;
           if (photoCenter) {
             const photoDistX = x - photoCenter.x;
             const photoDistY = y - photoCenter.y;
             const photoDistance = Math.sqrt(photoDistX * photoDistX + photoDistY * photoDistY);
-            const glowRadius = 300; // Radius of glow effect
+            const glowRadius = 180; // Radius of glow effect
 
             if (photoDistance < glowRadius) {
               inGlowArea = true;
@@ -181,12 +187,6 @@ export default function SectionGrid({ textAreaRef, photoRef }: SectionGridProps)
 
               color = `rgb(${r}, ${g}, ${b})`;
               opacity = Math.min(1, opacity + (glowIntensity * 0.6));
-
-              // Apply twinkle effect to random dots in glow area
-              if (shouldTwinkle(x, y)) {
-                const twinkleMultiplier = getTwinkle(x, y);
-                opacity = opacity * twinkleMultiplier;
-              }
             }
           }
 
