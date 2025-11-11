@@ -468,7 +468,7 @@ export default function Home() {
 
             {/* Background Card */}
             <div className="break-inside-avoid mb-6">
-              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100 space-y-4">
+              <div className="bg-white dark:bg-neutral-900/50 rounded-2xl p-8 text-gray-800 dark:text-neutral-100 space-y-4 min-h-[293px] flex flex-col justify-center">
                 <div>
                   I&apos;ve built products from scratch, scaled them to over 1M users, and operated across engineering, design, and growth.
                 </div>
