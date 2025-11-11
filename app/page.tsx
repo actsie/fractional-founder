@@ -61,16 +61,18 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-20 max-w-7xl mx-auto px-8 py-6">
-        <div className="flex items-center justify-between">
-          <div className="text-xl font-semibold">Fractional Founder</div>
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: document.getElementById('cta')?.offsetTop || 0, behavior: 'smooth' })}
-            className="inline-flex border border-transparent items-center justify-center rounded-md bg-[#C3B1FA] px-6 py-2 font-medium text-gray-900 hover:bg-[#B39EF7]"
-          >
-            Get Started
-          </button>
+      <nav className="sticky top-0 z-50 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-transparent">
+        <div className="max-w-7xl mx-auto px-8 py-3">
+          <div className="flex items-center justify-between">
+            <div className="text-xl font-semibold">Fractional Founder</div>
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: document.getElementById('cta')?.offsetTop || 0, behavior: 'smooth' })}
+              className="inline-flex border border-transparent items-center justify-center rounded-md bg-[#C3B1FA] px-6 py-2 font-medium text-gray-900 hover:bg-[#B39EF7]"
+            >
+              Get Started
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -328,7 +330,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex justify-center mb-8">
-          <div className="max-w-2xl w-full p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="group relative max-w-2xl w-full p-8 rounded-2xl bg-white/50 dark:bg-white/5 space-y-4 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="space-y-2">
               <div className="text-4xl font-bold">$130-$180<span className="text-xl font-normal text-gray-600 dark:text-neutral-400">/hr</span></div>
               <p className="text-sm text-gray-700/80 dark:text-neutral-300/80">Rate varies based on project complexity and type of work</p>
@@ -371,10 +373,16 @@ export default function Home() {
                 <span>Pitch deck polish & documentation</span>
               </li>
             </ul>
+            {/* Arrow element */}
+            <div className="absolute bottom-0 right-0 bg-[#AF97F8] p-2 rounded-tl-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center justify-center">
+              <svg className="w-4 h-4 text-white transition-transform duration-200 group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z" />
+              </svg>
+            </div>
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="max-w-2xl w-full p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="group relative max-w-2xl w-full p-6 rounded-xl bg-gradient-to-br from-[#5E50A0]/20 via-[#AF97F8]/10 to-[#C3B1FA]/20 cursor-pointer" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
             <div className="grid md:grid-cols-2 gap-6">
               {/* Left column - Pricing info */}
               <div className="space-y-2">
@@ -408,6 +416,12 @@ export default function Home() {
                   <span>No Commitment After Trial</span>
                 </div>
               </div>
+            </div>
+            {/* Arrow element */}
+            <div className="absolute bottom-0 right-0 bg-[#AF97F8] p-2 rounded-tl-xl opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center justify-center">
+              <svg className="w-4 h-4 text-white transition-transform duration-200 group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z" />
+              </svg>
             </div>
           </div>
         </div>
